@@ -1,0 +1,15 @@
+{
+    "name": "Custom/apis",
+    "autoload": {
+        "psr-4": {
+            "YourVendor\\Apis\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YourVendor\\Apis\\Providers\\ApisServiceProvider"
+            ]
+        }
+    }
+}

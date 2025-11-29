@@ -11,10 +11,18 @@ use Webkul\Shop\Http\Controllers\API\OnepageController;
 use Webkul\Shop\Http\Controllers\API\ProductController;
 use Webkul\Shop\Http\Controllers\API\ReviewController;
 use Webkul\Shop\Http\Controllers\API\WishlistController;
+use Webkul\Shop\Http\Controllers\API\CmsController;
+
 
 Route::group(['prefix' => 'api'], function () {
+    
+    Route::controller(CmsController::class)->prefix('cms')->group(function () {
+        Route::get('', 'index')->name('shop.api.cms.index');
+    });
+
+
     Route::controller(CoreController::class)->prefix('core')->group(function () {
-        Route::get('countries', 'getCountries')->name('shop.api.core.countries');
+        Route::get('countries2', 'getCountries')->name('shop.api.core.countries');
 
         Route::get('states', 'getStates')->name('shop.api.core.states');
     });

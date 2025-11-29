@@ -1,0 +1,10 @@
+{
+    "name": "Custom_api",
+    "alias": "hello-world",
+    "description": "Custom Hello World API module for Bagisto",
+    "status": 1,
+    "version": "1.0.0",
+    "providers": [
+        "Custom\\Apis\\Providers\\apiServiceProvider"
+    ]
+}
